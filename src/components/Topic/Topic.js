@@ -1,17 +1,20 @@
 import React from 'react';
 
-const Topic = () => {
+const Topic = ({ data }) => {
+
+    const { name, logo, total } = data;
+
     return (
-        <div>
-            <div className="card w-96 bg-base-100 shadow-xl">
+        <div className='flex items-center m-auto'>
+            <div className="card w-1/3 bg-yellow-50 shadow-2xl">
                 <figure className="px-10 pt-10">
-                    <img src="https://placeimg.com/400/225/arch" alt="Shoes" className="rounded-xl" />
+                    <img src={logo} alt="Shoes" className="rounded-xl" />
                 </figure>
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">Shoes!</h2>
-                    <p>If a dog chews shoes whose shoes does he choose?</p>
+                    <h2 className="card-title">{name}</h2>
+                    <p>Total Question: {total}</p>
                     <div className="card-actions">
-                        <button className="btn btn-primary">Buy Now</button>
+                        <button className="btn btn-primary cursor-pointer">Play Now</button>
                     </div>
                 </div>
             </div>

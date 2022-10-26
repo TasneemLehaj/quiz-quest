@@ -1,13 +1,26 @@
 import React from 'react';
+import { useLoaderData } from 'react-router-dom';
 import Topic from '../Topic/Topic';
 
 const Home = () => {
-    return (
-        <div className='home'>
-            <h2>Home
-            </h2>
-            <img src="https://img.freepik.com/free-vector/question-3d-effect-background_52683-30326.jpg?w=900&t=st=1666728063~exp=1666728663~hmac=3f6a8ca449721b065a4c8483ae36c92136a84c425c0f7f75a25f3b07fa264d86" alt="" />
 
+    const topics = useLoaderData();
+    const data = topics.data;
+    console.log(topics);
+
+    return (
+        <div className='home py-5'>
+
+            <div>
+                <img className='w-full h-80' src="https://i.pinimg.com/originals/db/34/d4/db34d40b271fb59477621550bf73ea0b.jpg" alt="" />
+            </div>
+            <div className='topic-container'>
+                {
+                    data.map(data => <Topic key={data.id}
+                        data={data}
+                    ></Topic>)
+                }
+            </div>
         </div>
     )
 };
