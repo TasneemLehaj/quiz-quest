@@ -1,1 +1,11 @@
-body {}
+.home-image {
+    position: relative;
+}
+
+.home-image img {
+    opacity: 0.45;
+}
+
+.home-image text {
+    position: absolute;
+}

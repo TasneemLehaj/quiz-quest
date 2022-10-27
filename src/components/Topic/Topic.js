@@ -5,8 +5,8 @@ const Topic = ({ data }) => {
     const { name, logo, total } = data;
 
     return (
-        <div className='flex items-center m-auto'>
-            <div className="card w-1/3 bg-yellow-50 shadow-2xl">
+        <div className='py-10 m-auto block '>
+            <div className="card w-1/3 bg-lime-100 shadow-2xl">
                 <figure className="px-10 pt-10">
                     <img src={logo} alt="Shoes" className="rounded-xl" />
                 </figure>

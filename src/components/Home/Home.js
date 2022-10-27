@@ -1,4 +1,5 @@
 import React from 'react';
+import './Home.css'
 import { useLoaderData } from 'react-router-dom';
 import Topic from '../Topic/Topic';
 
@@ -6,13 +7,14 @@ const Home = () => {
 
     const topics = useLoaderData();
     const data = topics.data;
-    console.log(topics);
+    // console.log(topics);
 
     return (
-        <div className='home py-5'>
+        <div className='home pb-10'>
 
-            <div>
+            <div className='home-image'>
                 <img className='w-full h-80' src="https://i.pinimg.com/originals/db/34/d4/db34d40b271fb59477621550bf73ea0b.jpg" alt="" />
+                <h1 className='text-2xl font-bold text-center'>There are fun and exiciting quiz questions we prepare for you <br></br> about your favorite topics! Let's play and learn!! </h1>
             </div>
             <div className='topic-container'>
                 {

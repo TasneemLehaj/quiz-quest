@@ -27,6 +27,9 @@ function App() {
         },
         {
           path: '/statistics',
+          loader: () => {
+            return fetch('https://openapi.programming-hero.com/api/quiz')
+          },
           element: <Statistics></Statistics>
         },
         {
@@ -39,7 +42,7 @@ function App() {
 
     {
       path: '*',
-      element: <div>
+      element: <div className='py-10 m-auto'>
         <h1>Oops!</h1>
         <p>Sorry, an unexpected error has occurred.</p>
       </div>
