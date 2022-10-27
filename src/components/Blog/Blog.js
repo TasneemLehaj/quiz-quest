@@ -13,7 +13,7 @@ const Blog = () => {
             {/* ques 2 */}
             <div className='text-left bg-base-100 m-10 border p-10 rounded-xl'>
                 <h2 className='font-bold'>Q. How does Context API work?</h2>
-                <p><span className='font-bold'>Answer:</span> </p>
+                <p><span className='font-bold'>Answer:</span> Context API is like the alternative of prop drilling. Prop drilling refers to moving props from grandparent to child to parent and son on manually. The React Context API is a way for a React app to effectively produce global variables that can be passed around without prop drilling. to use the Context APi,first we need to create a context using the createContext function from React.The createContext function accepts an initial value, but this initial value is not required.The Provider component is going to be used to wrap the components that are going to have access to the context.The Provider component receives a prop called value, which can be accessed from all the components that are wrapped inside Provider, and it will be responsible to grant access to the context data.Then we have to use the useContext hook to load the data on the component that we want to see the data. The useContext hook allows us to connect and consume a context. The useContext hook receives a single argument, which is the context that we want to have access to.Thus, without prop drilling a data can be passed through Context API.</p>
             </div>
 
             {/* ques 3 */}
