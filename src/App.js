@@ -7,6 +7,7 @@ import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
 import Quiz from './components/Quiz/Quiz';
 import QuizCard from './components/QuizCard/QuizCard';
+import ErrorPage from './components/ErrorPage/ErrorPage';
 
 function App() {
 
@@ -14,6 +15,7 @@ function App() {
     {
       path: '/',
       element: <Main></Main>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
           path: '/',
@@ -51,13 +53,6 @@ function App() {
       ]
     },
 
-    {
-      path: '*',
-      element: <div className='py-10 m-auto'>
-        <h1>Oops!</h1>
-        <p>Sorry, an unexpected error has occurred.</p>
-      </div>
-    }
 
 
 
