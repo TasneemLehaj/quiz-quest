@@ -1,13 +1,17 @@
 import React from 'react';
 import './Home.css'
-import { useLoaderData } from 'react-router-dom';
+// import { useLoaderData } from 'react-router-dom';
 import Topic from '../Topic/Topic';
+import { useContext } from 'react';
+import { QuizContex } from '../../layouts/Main';
 
 const Home = () => {
 
-    const topics = useLoaderData();
-    const data = topics.data;
+    // const topics = useLoaderData();
+    // const data = topics.data;
     // console.log(topics);
+    const topics = useContext(QuizContex)
+    const data = topics.data;
 
     return (
         <div className='home pb-10'>

@@ -1,19 +1,13 @@
-import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import React, { useContext } from 'react';
+import { QuizContex } from '../../layouts/Main';
 import Topic from '../Topic/Topic';
-import QuizCard from '../QuizCard/QuizCard';
-import { useState } from 'react';
-const Quiz = ({ quiz }) => {
 
-    const topics = useLoaderData();
+
+
+const Quiz = () => {
+
+    const topics = useContext(QuizContex)
     const data = topics.data;
-    console.log(topics);
-
-    const [loadData, setLoadData] = useState([]);
-
-    const handleQuiz = (quiz) => {
-        console.log(quiz);
-    }
 
 
     return (
@@ -29,13 +23,7 @@ const Quiz = ({ quiz }) => {
                 }
             </div>
 
-            <div>
-                <QuizCard key={quiz.id}
-                    quiz={quiz}
-                    handleQuiz={handleQuiz}
-                ></QuizCard>
 
-            </div>
         </div>
     )
 }

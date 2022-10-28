@@ -5,7 +5,6 @@ import Main from './layouts/Main';
 import Home from './components/Home/Home';
 import Statistics from './components/Statistics/Statistics';
 import Blog from './components/Blog/Blog';
-import Quiz from './components/Quiz/Quiz';
 import QuizCard from './components/QuizCard/QuizCard';
 import ErrorPage from './components/ErrorPage/ErrorPage';
 
@@ -16,21 +15,19 @@ function App() {
       path: '/',
       element: <Main></Main>,
       errorElement: <ErrorPage></ErrorPage>,
+      loader: () => {
+        return fetch('https://openapi.programming-hero.com/api/quiz')
+      },
       children: [
         {
           path: '/',
-          loader: () => {
-            return fetch('https://openapi.programming-hero.com/api/quiz')
-          },
           element: <Home></Home>
         },
         {
           path: '/quiz',
-          loader: () => {
-            return fetch('https://openapi.programming-hero.com/api/quiz')
-          },
-          element: <Quiz></Quiz>
+          element: <Home></Home>
         },
+
         {
           path: '/statistics',
           loader: () => {
@@ -43,9 +40,9 @@ function App() {
           element: <Blog></Blog>
         },
         {
-          path: '/quiz/:quizId',
+          path: '/quiz/:id',
           loader: async ({ params }) => {
-            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.quizId}`)
+            return fetch(`https://openapi.programming-hero.com/api/quiz/${params.id}`)
           },
           element: <QuizCard></QuizCard>
         }

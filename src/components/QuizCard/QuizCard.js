@@ -1,28 +1,23 @@
 import React from 'react';
-import { useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Questions from '../Questions/Questions';
 
 const QuizCard = () => {
-
     const quiz = useLoaderData();
-    // const [loadData, setLoadData] = useState([]);
+    const { name, id, questions } = quiz.data;
 
-    // const handleQuiz = (quiz) => {
-    //     console.log(quiz);
-    // const data = quiz.data;
-    // console.log(data);
-    // return (
-    //     <div>
-    //         <h2>This is question card: {data.length}</h2>
+    return (
+        <div>
+            <h2 className='py-2 bg-orange-500 text-2xl text-white mt-3'>Quiz Name: {name}</h2>
 
-    //         {
-    //             data.map(quizQues => console.log(quizQues.id))
-    //         }
-    //     </div>
-    // );
-
-}
-
-
+            {
+                questions.map(allquestion => <Questions
+                    key={id}
+                    allquestion={allquestion}
+                ></Questions>)
+            }
+        </div>
+    );
+};
 
 export default QuizCard;
