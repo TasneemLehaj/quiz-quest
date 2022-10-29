@@ -68,3 +68,10 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+### Purpose of this project -->
+
+This is a quiz related website which included some topics about web developement. In this website people can learn about web developement through some quizes. It also shows a statistics about how many questions each topic have. And there is also a blog part about some interesting as well as useful topics about web developement. Live website link is given here --
+
+[ https://heroic-lebkuchen-e85980.netlify.app/]
