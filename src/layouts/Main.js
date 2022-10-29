@@ -3,11 +3,10 @@ import { createContext } from 'react';
 import { Outlet, useLoaderData } from 'react-router-dom';
 import Header from '../components/Header/Header';
 
-
 export const QuizContex = createContext([])
 
 const Main = () => {
-    const quizTopic = useLoaderData();
+    const quizTopic = useLoaderData()
     return (
         <div>
             <QuizContex.Provider value={quizTopic}>

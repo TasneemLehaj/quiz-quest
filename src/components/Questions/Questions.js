@@ -5,6 +5,7 @@ import { EyeIcon } from '@heroicons/react/24/solid'
 import Swal from 'sweetalert2';
 
 
+
 const Questions = ({ allquestion }) => {
     const { question, options, correctAnswer } = allquestion;
 
@@ -16,7 +17,6 @@ const Questions = ({ allquestion }) => {
             toast.error('Wrong Answer')
         }
     }
-
 
     //  Display Correct Ans
     const handleCorrectAns = () => {
@@ -44,4 +44,3 @@ const Questions = ({ allquestion }) => {
 };
 
 export default Questions;
-
