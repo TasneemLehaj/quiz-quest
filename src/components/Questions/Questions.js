@@ -24,8 +24,8 @@ const Questions = ({ allquestion }) => {
     }
     return (
         <div>
-            <div className=" bg-green-700 flex">
-                <p className='text-2xl text-white m-2 py-3 w-full' text-center> {question} </p>
+            <div className="  bg-lime-100 flex">
+                <p className='text-2xl text-stone-600 m-2 py-3 w-full' text-center> {question} </p>
                 <button onClick={handleCorrectAns}>
                     <EyeIcon className="h-8 w-8 text-white mr-10" />
                 </button>

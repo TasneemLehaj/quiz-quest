@@ -7,7 +7,7 @@ const Topic = ({ data, handleQuiz }) => {
 
     return (
         <div className='py-10 m-auto block '>
-            <div className="card w-4/6 bg-lime-100 shadow-2xl">
+            <div className="card w-4/6 bg-lime-100 shadow-xl shadow-cyan-500/50">
                 <figure className="px-10 pt-10">
                     <img src={logo} alt="Shoes" className="rounded-xl" />
                 </figure>
